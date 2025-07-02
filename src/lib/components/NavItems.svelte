@@ -9,8 +9,13 @@
 	export let items: { label: string; href: string }[] = [];
 </script>
 
-<nav class="flex items-center justify-between rounded-b-md bg-amber-300 px-4">
-	<div class="text-lg font-semibold">Home</div>
+<nav class="flex items-center justify-between rounded-b-md bg-amber-300 pr-4">
+	<button
+		on:click={() => goto(items[0].href)}
+		class="px-2 py-3 text-lg font-semibold hover:cursor-pointer hover:rounded-bl-sm hover:bg-yellow-500"
+	>
+		<img src="/logo/Logo.svg" alt="Logo" class="h-7" />
+	</button>
 	<ul class="flex items-center">
 		{#each items as item}
 			<li>
@@ -20,7 +25,6 @@
 					class:font-normal={page.url.pathname !== item.href}
 					class:font-extrabold={page.url.pathname === item.href}
 					class:bg-yellow-500={page.url.pathname === item.href}
-					class:text-white={page.url.pathname === item.href}
 				>
 					<span class="font-semibold">
 						{item.label}
