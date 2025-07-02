@@ -1,7 +1,9 @@
 <script lang="ts">
 	import '../app.css';
-	
-	let { children } = $props();
+	import DefaultLayout from '$lib/layout/DefaultLayout.svelte';
 </script>
 
-{@render children()}
+<DefaultLayout />
+<main>
+	<slot />
+</main>

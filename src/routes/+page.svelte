@@ -1,3 +1,7 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<div class="flex justify-center">
+	<div
+		class="hover: w-fit cursor-pointer rounded-sm bg-blue-400 px-4 py-2 text-white transition-all delay-200 duration-300 hover:bg-yellow-200 hover:text-black hover:shadow-lg"
+	>
+		Hello
+	</div>
+</div>
