@@ -1,5 +1,4 @@
 <script context="module" lang="ts">
-	// Export agar bisa di-import dari luar
 	export type SidebarItem = {
 		label: string;
 		href?: string;
@@ -19,7 +18,6 @@
 <div class="flex w-full flex-row">
 	<nav class="h-lvh w-4/12 max-w-sm min-w-[200px] bg-amber-300">
 		<div class="flex flex-col items-center">
-			<!-- Go to first item if it has an href -->
 			{#if itemsSidebar.length && itemsSidebar[0].href}
 				<button
 					onclick={() => itemsSidebar[0].href && goto(itemsSidebar[0].href)}
@@ -48,7 +46,6 @@
 					{#if item.child}
 						<ul class="ml-4 border-l border-yellow-500">
 							{#each item.child as child}
-								<!-- Recursive rendering, simple 1-level only here -->
 								<li>
 									<button
 										onclick={() => child.href && goto(child.href)}
