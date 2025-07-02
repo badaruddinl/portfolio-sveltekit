@@ -23,9 +23,10 @@
 			<li>
 				<button
 					on:click={() => goto(item.href)}
-					class="w-full cursor-pointer px-3 py-4 text-left text-sm font-normal transition-all delay-100 duration-300 hover:bg-yellow-500"
+					class="w-full cursor-pointer px-3 py-4 text-left text-sm transition-all delay-100 duration-300 hover:bg-yellow-500"
+					class:font-normal={currentPath !== item.href}
+					class:font-extrabold={currentPath === item.href}
 					class:bg-yellow-500={currentPath === item.href}
-					class:font-bold={currentPath === item.href}
 					class:text-white={currentPath === item.href}
 				>
 					<span class="font-semibold">
