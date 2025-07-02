@@ -1,10 +1,9 @@
 <script lang="ts">
 	import '$src/app.css';
-	import { page } from '$app/state';
+	import { page } from '$app/stores';
 	import DefaultLayout from '$lib/layout/DefaultLayout.svelte';
 	const hiddenNavbarPatterns = [/^\/auth(\/.*)?$/, /^\/dashboard$/];
-	$: currentPath = page.url.pathname;
-	$: hideNavbar = hiddenNavbarPatterns.some((pattern) => pattern.test(currentPath));
+	$: hideNavbar = hiddenNavbarPatterns.some((pattern) => pattern.test($page.url.pathname));
 </script>
 
 {#if !hideNavbar}

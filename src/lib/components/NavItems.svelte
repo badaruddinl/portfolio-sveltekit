@@ -11,7 +11,7 @@
 
 <nav class="flex items-center justify-between rounded-b-md bg-amber-300 pr-4">
 	<button
-		on:click={() => goto(items[0].href)}
+		onclick={() => goto(items[0].href)}
 		class="px-2 py-3 text-lg font-semibold hover:cursor-pointer hover:rounded-bl-sm hover:bg-yellow-500"
 	>
 		<img src="/logo/Logo.svg" alt="Logo" class="h-7" />
@@ -20,7 +20,7 @@
 		{#each items as item}
 			<li>
 				<button
-					on:click={() => goto(item.href)}
+					onclick={() => goto(item.href)}
 					class="w-full cursor-pointer px-3 py-4 text-left text-sm transition-all delay-100 duration-300 hover:bg-yellow-500"
 					class:font-normal={page.url.pathname !== item.href}
 					class:font-extrabold={page.url.pathname === item.href}
