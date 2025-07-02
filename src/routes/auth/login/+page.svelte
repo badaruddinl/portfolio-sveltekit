@@ -37,7 +37,7 @@
 			>
 			<!-- <button
 				formaction="?/register"
-				class="rounded-md bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700"
+				class="cursor-pointer rounded-md bg-amber-300 px-4 py-2 text-black transition hover:bg-amber-400"
 				>Register</button
 			> -->
 		</form>
