@@ -15,7 +15,10 @@
 		"paths": {
 			"$lib/*": ["src/lib/*"],
 			"$lib": ["src/lib"],
-			"$env/*": [".svelte-kit/types/env.d.ts"]
+			"$src/*": ["src/*"],
+			"$src": ["src"],
+			"$env/*": ["./.svelte-kit/types/env.d.ts"],
+			"$static/*": ["static/*"]
 		}
 	}
 }

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../app.css';
+	import '$src/app.css';
 	import DefaultLayout from '$lib/layout/DefaultLayout.svelte';
 </script>
 
