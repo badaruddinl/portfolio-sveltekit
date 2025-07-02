@@ -4,6 +4,6 @@
 </script>
 
 <DefaultLayout />
-<main>
+<main class="font-montserrat">
 	<slot />
 </main>

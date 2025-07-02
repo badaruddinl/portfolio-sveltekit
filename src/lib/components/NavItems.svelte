@@ -1,21 +1,37 @@
+<script context="module" lang="ts">
+	export const ssr = true;
+</script>
+
 <script lang="ts">
-	import { page } from '$app/state';
-	export let items: {
-		label: string;
-		href: string;
-	}[] = [];
-	$: currentPath = page.url.pathname;
+	import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
+
+	export let items: { label: string; href: string }[] = [];
+
+	// Reactive path tracking
+	$: currentPath = $page.url.pathname;
+
+	function navigate(href: string) {
+		goto(href);
+	}
 </script>
 
 <nav class="flex items-center justify-between rounded-b-md bg-amber-300 px-4">
 	<div class="text-lg font-semibold">Home</div>
 	<ul class="flex items-center">
 		{#each items as item}
-			<li
-				class="cursor-pointer px-3 py-4 transition-all delay-100 duration-300 hover:bg-yellow-500"
-				class:bg-yellow-500={currentPath === item.href}
-			>
-				<a href={item.href}> {item.label} </a>
+			<li>
+				<button
+					on:click={() => goto(item.href)}
+					class="w-full cursor-pointer px-3 py-4 text-left text-sm font-normal transition-all delay-100 duration-300 hover:bg-yellow-500"
+					class:bg-yellow-500={currentPath === item.href}
+					class:font-bold={currentPath === item.href}
+					class:text-white={currentPath === item.href}
+				>
+					<span class="font-semibold">
+						{item.label}
+					</span>
+				</button>
 			</li>
 		{/each}
 	</ul>
