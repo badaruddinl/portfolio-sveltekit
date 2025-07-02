@@ -8,5 +8,5 @@
 <h1>Hi, {data.users.username}!</h1>
 <p>Your user ID is {data.users.id}.</p>
 <form method="post" action="?/logout" use:enhance>
-	<button>Sign out</button>
+	<button class="cursor-pointer hover:text-blue-400">Sign out</button>
 </form>
