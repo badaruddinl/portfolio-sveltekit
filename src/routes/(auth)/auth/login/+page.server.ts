@@ -6,7 +6,7 @@ import * as auth from '$lib/server/auth';
 import { db } from '$lib/server/db';
 import * as table from '$lib/server/db/schema';
 import type { Actions, PageServerLoad } from './$types';
-import { generateID } from '../../../utils/ulid.utils.js';
+import { generateID } from '../../../../utils/ulid.utils.js';
 
 export const load: PageServerLoad = async (event) => {
 	if (event.locals.users) {

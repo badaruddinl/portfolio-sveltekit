@@ -12,7 +12,7 @@
 			class="mb-4 w-8 cursor-pointer rounded-full bg-amber-400 p-1 hover:bg-yellow-500"
 			onclick={() => goto('/')}
 		>
-			<img src="/logo/Logo.svg" alt="Logo" width="auto" />
+			<img src="../logo/Logo.svg" alt="Logo" width="auto" />
 		</button>
 
 		<form method="post" action="?/login" class="flex w-full flex-col space-y-2" use:enhance>
@@ -37,7 +37,7 @@
 			>
 			<!-- <button
 				formaction="?/register"
-				class="cursor-pointer rounded-md bg-amber-300 px-4 py-2 text-black transition hover:bg-amber-400"
+				class="px-4 py-2 text-black transition rounded-md cursor-pointer bg-amber-300 hover:bg-amber-400"
 				>Register</button
 			> -->
 		</form>
