@@ -1,14 +1,10 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	import DefaultLayout from '$lib/layout/DefaultLayout.svelte';
-	const hiddenNavbarPatterns = [/^\/auth(\/.*)?$/, /^\/dashboard$/];
-	$: hideNavbar = hiddenNavbarPatterns.some((pattern) => pattern.test($page.url.pathname));
+	import DefaultLayout from '$lib/layouts/DefaultLayout.svelte';
+	import MainLayout from '$lib/layouts/MainLayout.svelte';
 </script>
 
-<!-- {#if !hideNavbar}
-{/if} -->
-<DefaultLayout />
-
 <main class="font-montserrat">
-	<slot />
+	<MainLayout>
+		<slot />
+	</MainLayout>
 </main>

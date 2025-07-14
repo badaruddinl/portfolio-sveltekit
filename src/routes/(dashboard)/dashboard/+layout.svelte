@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '$src/app.css';
-	import DashboardLayout from '$lib/layout/DashboardLayout.svelte';
+	import DashboardLayout from '$lib/layouts/DashboardLayout.svelte';
 </script>
 
 <main class="font-montserrat">
