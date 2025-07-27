@@ -4,8 +4,5 @@
 </script>
 
 <NavbarLayout />
-<div class="pt-20">
-	<!-- offset for fixed navbar -->
-	<slot />
-</div>
+<slot />
 <FooterLayout />
