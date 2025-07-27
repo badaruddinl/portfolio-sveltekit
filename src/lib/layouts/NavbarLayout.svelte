@@ -12,7 +12,6 @@
 	];
 
 	const currentPath = derived(page, ($page) => $page.url.pathname);
-	console.log(currentPath);
 
 	function handleClick(path: string) {
 		goto(path);
